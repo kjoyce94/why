@@ -1,0 +1,1629 @@
+hmmer-3.2.1/documentation/man/hmmfetch.man.in
+hmmer-3.2.1/documentation/man/nhmmer.man.in
+hmmer-3.2.1/documentation/man/hmmsearch.man.in
+hmmer-3.2.1/documentation/man/hmmer.man.in
+hmmer-3.2.1/documentation/man/hmmsim.man.in
+hmmer-3.2.1/documentation/man/hmmlogo.man.in
+hmmer-3.2.1/documentation/man/jackhmmer.man.in
+hmmer-3.2.1/documentation/man/hmmbuild.man.in
+hmmer-3.2.1/documentation/man/hmmemit.man.in
+hmmer-3.2.1/documentation/man/Makefile.in
+hmmer-3.2.1/documentation/man/hmmscan.man.in
+[cb2@localhost sf_D_DRIVE]$ ls
+9606.tsv                 count.txt             index.html.1
+cb2-101-2019             domaincount.txt       NC_000913.faa
+cb2-firstassignment      ftp.ncbi.nlm.nih.gov  $RECYCLE.BIN
+cb2-firstassignment.git  hmmer-3.2.1           System Volume Information
+cb2.tar                  hmmer-3.2.1.tar.gz
+cg2.tar                  index.html
+[cb2@localhost sf_D_DRIVE]$ mkdir hammer
+[cb2@localhost sf_D_DRIVE]$ ls
+9606.tsv                 count.txt             index.html
+cb2-101-2019             domaincount.txt       index.html.1
+cb2-firstassignment      ftp.ncbi.nlm.nih.gov  NC_000913.faa
+cb2-firstassignment.git  hammer                $RECYCLE.BIN
+cb2.tar                  hmmer-3.2.1           System Volume Information
+cg2.tar                  hmmer-3.2.1.tar.gz
+[cb2@localhost sf_D_DRIVE]$ mv hmmer-3.2.1 hammer
+[cb2@localhost sf_D_DRIVE]$ ls
+9606.tsv                 count.txt             index.html.1
+cb2-101-2019             domaincount.txt       NC_000913.faa
+cb2-firstassignment      ftp.ncbi.nlm.nih.gov  $RECYCLE.BIN
+cb2-firstassignment.git  hammer                System Volume Information
+cb2.tar                  hmmer-3.2.1.tar.gz
+cg2.tar                  index.html
+[cb2@localhost sf_D_DRIVE]$ cd hammer
+[cb2@localhost hammer]$ ls
+hmmer-3.2.1
+[cb2@localhost hammer]$ cd hmmer-3.2.1/
+[cb2@localhost hmmer-3.2.1]$ ls
+config.guess  documentation  libdivsufsort  profmark       test-speed
+config.sub    easel          LICENSE        README.md      testsuite
+configure     INSTALL        Makefile.in    RELEASE-3.2.1  tutorial
+configure.ac  install-sh     makeTAGS.sh    src            Userguide.pdf
+[cb2@localhost hmmer-3.2.1]$ ls Make*
+Makefile.in
+[cb2@localhost hmmer-3.2.1]$ ls con*
+config.guess  config.sub  configure  configure.ac
+[cb2@localhost hmmer-3.2.1]$ ./configure 
+configure: Configuring HMMER3 for your system.
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ranlib... ranlib
+checking for ar... /usr/bin/ar
+checking whether ln -s works... no, using cp -pR
+checking for C compiler vendor... gnu
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for gcc -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking whether gcc -std=gnu99 is Clang... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking whether gcc -std=gnu99 can compile our Altivec/VMX code... no
+checking whether gcc -std=gnu99 can compile our SSE code... yes
+configure: Activating Intel/AMD SSE vector DP implementation
+checking whether _MM_SET_FLUSH_ZERO_MODE is supported... yes
+checking compiler support --start-group... yes
+checking for gzip... /usr/bin/gzip
+checking for library containing clock_gettime... none required
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for sys/sysctl.h... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for off_t... yes
+checking whether byte ordering is bigendian... no
+checking for __attribute__((noreturn))... yes
+checking for __attribute__((format))... yes
+checking for mkstemp... yes
+checking for popen... yes
+checking for putenv... yes
+checking for strcasecmp... yes
+checking for strsep... yes
+checking for times... yes
+checking for getpid... yes
+checking for sysctl... yes
+checking for sysconf... yes
+checking for getcwd... yes
+checking for chmod... yes
+checking for stat... yes
+checking for fstat... yes
+checking for erfc... no
+checking for library containing ntohs... none required
+checking for library containing ntohl... none required
+checking for library containing htons... none required
+checking for library containing htonl... none required
+checking for library containing socket... none required
+checking for library containing inet_pton... none required
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating testsuite/Makefile
+config.status: creating profmark/Makefile
+config.status: creating src/impl_sse/Makefile
+config.status: creating documentation/Makefile
+config.status: creating documentation/man/Makefile
+config.status: creating documentation/userguide/Makefile
+config.status: creating libdivsufsort/Makefile
+config.status: creating easel/Makefile
+config.status: creating easel/miniapps/Makefile
+config.status: creating easel/testsuite/Makefile
+config.status: creating easel/documentation/Makefile
+config.status: creating documentation/userguide/titlepage.tex
+config.status: creating documentation/userguide/copyright.tex
+config.status: creating documentation/man/alimask.man
+config.status: creating documentation/man/hmmalign.man
+config.status: creating documentation/man/hmmbuild.man
+config.status: creating documentation/man/hmmconvert.man
+config.status: creating documentation/man/hmmemit.man
+config.status: creating documentation/man/hmmer.man
+config.status: creating documentation/man/hmmfetch.man
+config.status: creating documentation/man/hmmlogo.man
+config.status: creating documentation/man/hmmpgmd.man
+config.status: creating documentation/man/hmmpress.man
+config.status: creating documentation/man/hmmscan.man
+config.status: creating documentation/man/hmmsearch.man
+config.status: creating documentation/man/hmmsim.man
+config.status: creating documentation/man/hmmstat.man
+config.status: creating documentation/man/jackhmmer.man
+config.status: creating documentation/man/makehmmerdb.man
+config.status: creating documentation/man/nhmmer.man
+config.status: creating documentation/man/nhmmscan.man
+config.status: creating documentation/man/phmmer.man
+config.status: creating easel/miniapps/esl-afetch.man
+config.status: creating easel/miniapps/esl-alimanip.man
+config.status: creating easel/miniapps/esl-alimap.man
+config.status: creating easel/miniapps/esl-alimask.man
+config.status: creating easel/miniapps/esl-alimerge.man
+config.status: creating easel/miniapps/esl-alipid.man
+config.status: creating easel/miniapps/esl-alirev.man
+config.status: creating easel/miniapps/esl-alistat.man
+config.status: creating easel/miniapps/esl-compalign.man
+config.status: creating easel/miniapps/esl-compstruct.man
+config.status: creating easel/miniapps/esl-construct.man
+config.status: creating easel/miniapps/esl-histplot.man
+config.status: creating easel/miniapps/esl-mask.man
+config.status: creating easel/miniapps/esl-reformat.man
+config.status: creating easel/miniapps/esl-selectn.man
+config.status: creating easel/miniapps/esl-seqrange.man
+config.status: creating easel/miniapps/esl-seqstat.man
+config.status: creating easel/miniapps/esl-sfetch.man
+config.status: creating easel/miniapps/esl-shuffle.man
+config.status: creating easel/miniapps/esl-ssdraw.man
+config.status: creating easel/miniapps/esl-translate.man
+config.status: creating easel/miniapps/esl-weight.man
+config.status: creating easel/decoy_config.h
+config.status: creating src/p7_config.h
+config.status: creating easel/esl_config.h
+config.status: creating libdivsufsort/divsufsort.h
+config.status: linking src/impl_sse to src/impl
+cp: omitting directory 'src/impl_sse'
+config.status: error: cannot link or copy src/impl_sse to src/impl
+[cb2@localhost hmmer-3.2.1]$ cd ..
+[cb2@localhost hammer]$ cd ..
+[cb2@localhost sf_D_DRIVE]$ cp hmmer-3.2.1.tar.gz ~
+[cb2@localhost sf_D_DRIVE]$ cd
+[cb2@localhost ~]$  mkdir hmmer
+[cb2@localhost ~]$ mv hmmer-3.2.1.tar.gz hmmer
+[cb2@localhost ~]$ cd hmmer
+[cb2@localhost hmmer]$ ls
+hmmer-3.2.1.tar.gz
+[cb2@localhost hmmer]$ tar -xvzf hmmer-3.2.1.tar.gz 
+hmmer-3.2.1/
+hmmer-3.2.1/RELEASE-3.2.1
+hmmer-3.2.1/documentation/
+hmmer-3.2.1/install-sh
+hmmer-3.2.1/configure.ac
+hmmer-3.2.1/tutorial/
+hmmer-3.2.1/INSTALL
+hmmer-3.2.1/libdivsufsort/
+hmmer-3.2.1/LICENSE
+hmmer-3.2.1/test-speed/
+hmmer-3.2.1/configure
+hmmer-3.2.1/testsuite/
+hmmer-3.2.1/config.guess
+hmmer-3.2.1/README.md
+hmmer-3.2.1/Userguide.pdf
+hmmer-3.2.1/config.sub
+hmmer-3.2.1/.gitignore
+hmmer-3.2.1/profmark/
+hmmer-3.2.1/makeTAGS.sh
+hmmer-3.2.1/easel/
+hmmer-3.2.1/Makefile.in
+hmmer-3.2.1/src/
+hmmer-3.2.1/src/itest_brute.c
+hmmer-3.2.1/src/p7_gmx.c
+hmmer-3.2.1/src/hmmdutils.c
+hmmer-3.2.1/src/hmmpgmd_client_example.pl
+hmmer-3.2.1/src/p7_tophits.c
+hmmer-3.2.1/src/generic_fwdback_banded.c
+hmmer-3.2.1/src/hmmscan.c
+hmmer-3.2.1/src/modelconfig.c
+hmmer-3.2.1/src/p7_gmxchk.h
+hmmer-3.2.1/src/generic_stotrace.c
+hmmer-3.2.1/src/generic_null2.c
+hmmer-3.2.1/src/p7_alidisplay.c
+hmmer-3.2.1/src/impl_sse/
+hmmer-3.2.1/src/evalues.c
+hmmer-3.2.1/src/hmmemit.c
+hmmer-3.2.1/src/p7_gbands.c
+hmmer-3.2.1/src/p7_hmmcache.h
+hmmer-3.2.1/src/emit.c
+hmmer-3.2.1/src/p7_gmxb.c
+hmmer-3.2.1/src/hmmpress.c
+hmmer-3.2.1/src/hmmbuild.c
+hmmer-3.2.1/src/cachedb.h
+hmmer-3.2.1/src/alimask.c
+hmmer-3.2.1/src/nhmmscan.c
+hmmer-3.2.1/src/hmmpgmd.c
+hmmer-3.2.1/src/p7_prior.c
+hmmer-3.2.1/src/p7_scoredata.c
+hmmer-3.2.1/src/generic_fwdback_chk.c
+hmmer-3.2.1/src/impl_vmx/
+hmmer-3.2.1/src/tracealign.c
+hmmer-3.2.1/src/hmmpress.itest.pl
+hmmer-3.2.1/src/p7_builder.c
+hmmer-3.2.1/src/p7_bg.c
+hmmer-3.2.1/src/hmmer.h
+hmmer-3.2.1/src/seqmodel.c
+hmmer-3.2.1/src/generic_decoding.c
+hmmer-3.2.1/src/hmmalign.c
+hmmer-3.2.1/src/fm_alphabet.c
+hmmer-3.2.1/src/generic_viterbi.c
+hmmer-3.2.1/src/h2_io.c
+hmmer-3.2.1/src/fm_sse.c
+hmmer-3.2.1/src/p7_domaindef.c
+hmmer-3.2.1/src/generic_fwdback_rescaled.c
+hmmer-3.2.1/src/p7_spensemble.c
+hmmer-3.2.1/src/hmmdmstr.c
+hmmer-3.2.1/src/p7_hmmwindow.c
+hmmer-3.2.1/src/p7_hmm.c
+hmmer-3.2.1/src/nhmmer.c
+hmmer-3.2.1/src/fm_general.c
+hmmer-3.2.1/src/hmmdwrkr.c
+hmmer-3.2.1/src/generic_msv.c
+hmmer-3.2.1/src/hmmsim.c
+hmmer-3.2.1/src/fm_ssv.c
+hmmer-3.2.1/src/hmmlogo.c
+hmmer-3.2.1/src/build.c
+hmmer-3.2.1/src/makehmmerdb.c
+hmmer-3.2.1/src/jackhmmer.c
+hmmer-3.2.1/src/p7_pipeline.c
+hmmer-3.2.1/src/generic_optacc.c
+hmmer-3.2.1/src/modelstats.c
+hmmer-3.2.1/src/p7_config.h.in
+hmmer-3.2.1/src/hmmc2.c
+hmmer-3.2.1/src/heatmap.c
+hmmer-3.2.1/src/logsum.c
+hmmer-3.2.1/src/hmmstat.c
+hmmer-3.2.1/src/generic_fwdback.c
+hmmer-3.2.1/src/p7_gmxchk.c
+hmmer-3.2.1/src/phmmer.c
+hmmer-3.2.1/src/hmmsearch.c
+hmmer-3.2.1/src/generic_vtrace.c
+hmmer-3.2.1/src/mpisupport.c
+hmmer-3.2.1/src/cachedb.c
+hmmer-3.2.1/src/hmmpgmd.h
+hmmer-3.2.1/src/p7_gmxb.h
+hmmer-3.2.1/src/p7_null3.c
+hmmer-3.2.1/src/p7_trace.c
+hmmer-3.2.1/src/p7_hmmcache.c
+hmmer-3.2.1/src/p7_gbands.h
+hmmer-3.2.1/src/hmmerfm-exactmatch.c
+hmmer-3.2.1/src/Makefile.in
+hmmer-3.2.1/src/eweight.c
+hmmer-3.2.1/src/hmmpgmd2msa.c
+hmmer-3.2.1/src/hmmer.c
+hmmer-3.2.1/src/p7_profile.c
+hmmer-3.2.1/src/hmmconvert.c
+hmmer-3.2.1/src/errors.c
+hmmer-3.2.1/src/hmmfetch.c
+hmmer-3.2.1/src/p7_hmmfile.c
+hmmer-3.2.1/src/impl_vmx/p7_oprofile.c
+hmmer-3.2.1/src/impl_vmx/optacc.c
+hmmer-3.2.1/src/impl_vmx/vitscore.c
+hmmer-3.2.1/src/impl_vmx/io.c
+hmmer-3.2.1/src/impl_vmx/decoding.c
+hmmer-3.2.1/src/impl_vmx/msvfilter.c
+hmmer-3.2.1/src/impl_vmx/impl_vmx.h
+hmmer-3.2.1/src/impl_vmx/fwdback.c
+hmmer-3.2.1/src/impl_vmx/p7_omx.c
+hmmer-3.2.1/src/impl_vmx/null2.c
+hmmer-3.2.1/src/impl_vmx/vitfilter.c
+hmmer-3.2.1/src/impl_vmx/stotrace.c
+hmmer-3.2.1/src/impl_vmx/00MANIFEST
+hmmer-3.2.1/src/impl_vmx/Makefile.in
+hmmer-3.2.1/src/impl_vmx/mpi.c
+hmmer-3.2.1/src/impl_sse/p7_oprofile.c
+hmmer-3.2.1/src/impl_sse/optacc.c
+hmmer-3.2.1/src/impl_sse/vitscore.c
+hmmer-3.2.1/src/impl_sse/io.c
+hmmer-3.2.1/src/impl_sse/decoding.c
+hmmer-3.2.1/src/impl_sse/msvfilter.c
+hmmer-3.2.1/src/impl_sse/fbparsers.tex
+hmmer-3.2.1/src/impl_sse/ssvfilter.c
+hmmer-3.2.1/src/impl_sse/impl_sse.h
+hmmer-3.2.1/src/impl_sse/fwdback.c
+hmmer-3.2.1/src/impl_sse/p7_omx.c
+hmmer-3.2.1/src/impl_sse/null2.c
+hmmer-3.2.1/src/impl_sse/p7_omx.ai
+hmmer-3.2.1/src/impl_sse/vitfilter.c
+hmmer-3.2.1/src/impl_sse/stotrace.c
+hmmer-3.2.1/src/impl_sse/00MANIFEST
+hmmer-3.2.1/src/impl_sse/Makefile.in
+hmmer-3.2.1/src/impl_sse/mpi.c
+hmmer-3.2.1/easel/esl_sse.h
+hmmer-3.2.1/easel/esl_regexp.tex
+hmmer-3.2.1/easel/esl_exponential.c
+hmmer-3.2.1/easel/esl_msashuffle.c
+hmmer-3.2.1/easel/esl_alphabet.h
+hmmer-3.2.1/easel/esl_random.h
+hmmer-3.2.1/easel/esl_msafile_stockholm.c
+hmmer-3.2.1/easel/esl_msafile_a2m.c
+hmmer-3.2.1/easel/esl_recorder.h
+hmmer-3.2.1/easel/esl_gev.tex
+hmmer-3.2.1/easel/esl_vmx.h
+hmmer-3.2.1/easel/esl_cluster.h
+hmmer-3.2.1/easel/miniapps/
+hmmer-3.2.1/easel/esl_ssi.c
+hmmer-3.2.1/easel/esl_heap.h
+hmmer-3.2.1/easel/esl_hyperexp.tex
+hmmer-3.2.1/easel/esl_mpi.tex
+hmmer-3.2.1/easel/esl_wuss.tex
+hmmer-3.2.1/easel/esl_dmatrix.tex
+hmmer-3.2.1/easel/esl_keyhash.h
+hmmer-3.2.1/easel/esl_arr3.h
+hmmer-3.2.1/easel/esl_sq.c
+hmmer-3.2.1/easel/esl_mem.h
+hmmer-3.2.1/easel/esl_stretchexp.h
+hmmer-3.2.1/easel/documentation/
+hmmer-3.2.1/easel/esl_getopts.c
+hmmer-3.2.1/easel/esl_dsqdata.tex
+hmmer-3.2.1/easel/install-sh
+hmmer-3.2.1/easel/configure.ac
+hmmer-3.2.1/easel/esl_regexp.h
+hmmer-3.2.1/easel/esl_dirichlet.h
+hmmer-3.2.1/easel/esl_sqio.h
+hmmer-3.2.1/easel/esl_randomseq.c
+hmmer-3.2.1/easel/esl_randomseq.tex
+hmmer-3.2.1/easel/esl_stopwatch.tex
+hmmer-3.2.1/easel/esl_quicksort.h
+hmmer-3.2.1/easel/esl_fileparser.h
+hmmer-3.2.1/easel/interface_gsl.h
+hmmer-3.2.1/easel/formats/
+hmmer-3.2.1/easel/esl_hmm.c
+hmmer-3.2.1/easel/esl_swat.tex
+hmmer-3.2.1/easel/esl_stopwatch.c
+hmmer-3.2.1/easel/esl_neon.c
+hmmer-3.2.1/easel/esl_msa.tex
+hmmer-3.2.1/easel/esl_mpi.c
+hmmer-3.2.1/easel/LICENSE
+hmmer-3.2.1/easel/esl_gencode.c
+hmmer-3.2.1/easel/esl_stats.c
+hmmer-3.2.1/easel/esl_red_black.h
+hmmer-3.2.1/easel/demotic/
+hmmer-3.2.1/easel/esl_scorematrix.h
+hmmer-3.2.1/easel/esl_avx512.c
+hmmer-3.2.1/easel/esl_alloc.c
+hmmer-3.2.1/easel/easel.c
+hmmer-3.2.1/easel/esl_distance.c
+hmmer-3.2.1/easel/esl_histogram.c
+hmmer-3.2.1/easel/esl_composition.h
+hmmer-3.2.1/easel/esl_gev.c
+hmmer-3.2.1/easel/esl_tree.tex
+hmmer-3.2.1/easel/esl_weibull.h
+hmmer-3.2.1/easel/esl_paml.c
+hmmer-3.2.1/easel/esl_msafile_phylip.c
+hmmer-3.2.1/easel/esl_workqueue.h
+hmmer-3.2.1/easel/esl_msa.c
+hmmer-3.2.1/easel/esl_msafile2.h
+hmmer-3.2.1/easel/esl_tree.c
+hmmer-3.2.1/easel/esl_buffer.tex
+hmmer-3.2.1/easel/esl_sqio_ascii.h
+hmmer-3.2.1/easel/esl_hyperexp.h
+hmmer-3.2.1/easel/esl_arr2.c
+hmmer-3.2.1/easel/esl_weibull.tex
+hmmer-3.2.1/easel/esl_vectorops.c
+hmmer-3.2.1/easel/testsuite/
+hmmer-3.2.1/easel/esl_ratematrix.c
+hmmer-3.2.1/easel/esl_msaweight.c
+hmmer-3.2.1/easel/esl_rootfinder.h
+hmmer-3.2.1/easel/esl_sqio_ncbi.c
+hmmer-3.2.1/easel/esl_normal.tex
+hmmer-3.2.1/easel/esl_mixgev.c
+hmmer-3.2.1/easel/esl_alphabet.tex
+hmmer-3.2.1/easel/esl_msafile_psiblast.c
+hmmer-3.2.1/easel/esl_msafile_selex.h
+hmmer-3.2.1/easel/esl_msacluster.h
+hmmer-3.2.1/easel/esl_threads.h
+hmmer-3.2.1/easel/esl_minimizer.c
+hmmer-3.2.1/easel/esl_dsqdata.c
+hmmer-3.2.1/easel/esl_swat.c
+hmmer-3.2.1/easel/esl_normal.h
+hmmer-3.2.1/easel/esl_cpu.h
+hmmer-3.2.1/easel/interface_lapack.h
+hmmer-3.2.1/easel/esl_wuss.h
+hmmer-3.2.1/easel/esl_gamma.c
+hmmer-3.2.1/easel/esl_cluster.tex
+hmmer-3.2.1/easel/config.guess
+hmmer-3.2.1/easel/esl_gumbel.h
+hmmer-3.2.1/easel/esl_msafile_clustal.c
+hmmer-3.2.1/easel/esl_dmatrix.h
+hmmer-3.2.1/easel/esl_sqio.tex
+hmmer-3.2.1/easel/esl_huffman.c
+hmmer-3.2.1/easel/esl_stack.c
+hmmer-3.2.1/easel/esl_msafile.h
+hmmer-3.2.1/easel/esl_msafile_afa.c
+hmmer-3.2.1/easel/esl_histogram.tex
+hmmer-3.2.1/easel/esl_config.h.in
+hmmer-3.2.1/easel/esl_buffer.h
+hmmer-3.2.1/easel/esl_scorematrix.tex
+hmmer-3.2.1/easel/esl_random.tex
+hmmer-3.2.1/easel/esl_vectorops.tex
+hmmer-3.2.1/easel/esl_avx.c
+hmmer-3.2.1/easel/esl_sse.tex
+hmmer-3.2.1/easel/README.md
+hmmer-3.2.1/easel/esl_dirichlet.c
+hmmer-3.2.1/easel/esl_regexp.c
+hmmer-3.2.1/easel/esl_stretchexp.c
+hmmer-3.2.1/easel/esl_sq.h
+hmmer-3.2.1/easel/esl_mem.c
+hmmer-3.2.1/easel/esl_keyhash.c
+hmmer-3.2.1/easel/esl_arr3.c
+hmmer-3.2.1/easel/esl_getopts.h
+hmmer-3.2.1/easel/esl_ssi.tex
+hmmer-3.2.1/easel/config.sub
+hmmer-3.2.1/easel/esl_keyhash.tex
+hmmer-3.2.1/easel/esl_vmx.c
+hmmer-3.2.1/easel/esl_recorder.c
+hmmer-3.2.1/easel/esl_msafile_stockholm.h
+hmmer-3.2.1/easel/esl_msafile_a2m.h
+hmmer-3.2.1/easel/esl_gamma.tex
+hmmer-3.2.1/easel/esl_heap.c
+hmmer-3.2.1/easel/esl_ssi.h
+hmmer-3.2.1/easel/esl_cluster.c
+hmmer-3.2.1/easel/esl_sse.c
+hmmer-3.2.1/easel/.gitignore
+hmmer-3.2.1/easel/esl_getopts.tex
+hmmer-3.2.1/easel/esl_random.c
+hmmer-3.2.1/easel/esl_alphabet.c
+hmmer-3.2.1/easel/esl_msashuffle.h
+hmmer-3.2.1/easel/esl_exponential.h
+hmmer-3.2.1/easel/esl_distance.h
+hmmer-3.2.1/easel/esl_paml.h
+hmmer-3.2.1/easel/esl_weibull.c
+hmmer-3.2.1/easel/esl_distance.tex
+hmmer-3.2.1/easel/esl_gev.h
+hmmer-3.2.1/easel/esl_gumbel.tex
+hmmer-3.2.1/easel/esl_composition.c
+hmmer-3.2.1/easel/esl_histogram.h
+hmmer-3.2.1/easel/esl_red_black.c
+hmmer-3.2.1/easel/esl_scorematrix.c
+hmmer-3.2.1/easel/esl_avx512.h
+hmmer-3.2.1/easel/esl_ratematrix.tex
+hmmer-3.2.1/easel/esl_stats.h
+hmmer-3.2.1/easel/esl_gencode.h
+hmmer-3.2.1/easel/esl_alloc.md
+hmmer-3.2.1/easel/easel.h
+hmmer-3.2.1/easel/esl_alloc.h
+hmmer-3.2.1/easel/interface_gsl.c
+hmmer-3.2.1/easel/esl_mpi.h
+hmmer-3.2.1/easel/esl_stopwatch.h
+hmmer-3.2.1/easel/esl_neon.h
+hmmer-3.2.1/easel/esl_hmm.h
+hmmer-3.2.1/easel/esl_quicksort.c
+hmmer-3.2.1/easel/esl_rootfinder.tex
+hmmer-3.2.1/easel/m4/
+hmmer-3.2.1/easel/esl_sq.tex
+hmmer-3.2.1/easel/esl_sqio.c
+hmmer-3.2.1/easel/esl_randomseq.h
+hmmer-3.2.1/easel/esl_fileparser.c
+hmmer-3.2.1/easel/makeTAGS.sh
+hmmer-3.2.1/easel/esl_mixgev.h
+hmmer-3.2.1/easel/esl_stretchexp.tex
+hmmer-3.2.1/easel/esl_stack.tex
+hmmer-3.2.1/easel/devkit/
+hmmer-3.2.1/easel/esl_dirichlet.tex
+hmmer-3.2.1/easel/esl_msaweight.tex
+hmmer-3.2.1/easel/esl_sqio_ncbi.h
+hmmer-3.2.1/easel/esl_rootfinder.c
+hmmer-3.2.1/easel/esl_ratematrix.h
+hmmer-3.2.1/easel/esl_msaweight.h
+hmmer-3.2.1/easel/esl_msacluster.tex
+hmmer-3.2.1/easel/esl_sqio_ascii.c
+hmmer-3.2.1/easel/esl_vectorops.h
+hmmer-3.2.1/easel/esl_arr2.h
+hmmer-3.2.1/easel/esl_fileparser.tex
+hmmer-3.2.1/easel/esl_hyperexp.c
+hmmer-3.2.1/easel/esl_exponential.tex
+hmmer-3.2.1/easel/esl_workqueue.c
+hmmer-3.2.1/easel/esl_paml.tex
+hmmer-3.2.1/easel/decoy_config.h.in
+hmmer-3.2.1/easel/esl_msafile_phylip.h
+hmmer-3.2.1/easel/esl_tree.h
+hmmer-3.2.1/easel/esl_msa.h
+hmmer-3.2.1/easel/esl_msafile2.c
+hmmer-3.2.1/easel/esl_stats.tex
+hmmer-3.2.1/easel/esl_buffer.c
+hmmer-3.2.1/easel/easel.tex
+hmmer-3.2.1/easel/Makefile.in
+hmmer-3.2.1/easel/esl_avx.h
+hmmer-3.2.1/easel/esl_dmatrix.c
+hmmer-3.2.1/easel/esl_msafile_clustal.h
+hmmer-3.2.1/easel/esl_gumbel.c
+hmmer-3.2.1/easel/esl_msafile.c
+hmmer-3.2.1/easel/esl_msafile_afa.h
+hmmer-3.2.1/easel/esl_stack.h
+hmmer-3.2.1/easel/esl_huffman.h
+hmmer-3.2.1/easel/esl_cpu.c
+hmmer-3.2.1/easel/interface_lapack.c
+hmmer-3.2.1/easel/esl_normal.c
+hmmer-3.2.1/easel/esl_minimizer.tex
+hmmer-3.2.1/easel/esl_wuss.c
+hmmer-3.2.1/easel/esl_gamma.h
+hmmer-3.2.1/easel/esl_msafile_psiblast.h
+hmmer-3.2.1/easel/esl_msafile.md
+hmmer-3.2.1/easel/esl_dsqdata.h
+hmmer-3.2.1/easel/esl_msa_testfiles/
+hmmer-3.2.1/easel/esl_threads.c
+hmmer-3.2.1/easel/esl_minimizer.h
+hmmer-3.2.1/easel/esl_msacluster.c
+hmmer-3.2.1/easel/esl_msafile_selex.c
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/
+hmmer-3.2.1/easel/esl_msa_testfiles/a2m/
+hmmer-3.2.1/easel/esl_msa_testfiles/psiblast/
+hmmer-3.2.1/easel/esl_msa_testfiles/afa/
+hmmer-3.2.1/easel/esl_msa_testfiles/clustal/
+hmmer-3.2.1/easel/esl_msa_testfiles/phylips/
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.6
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.1
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.8
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.7
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.2
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.5
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.good.1
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.4
+hmmer-3.2.1/easel/esl_msa_testfiles/stockholm/stockholm.bad.3
+hmmer-3.2.1/easel/esl_msa_testfiles/phylips/phylips.good.2
+hmmer-3.2.1/easel/esl_msa_testfiles/phylips/phylips.good.1
+hmmer-3.2.1/easel/esl_msa_testfiles/clustal/clustal.good.1
+hmmer-3.2.1/easel/esl_msa_testfiles/clustal/clustal.good.2
+hmmer-3.2.1/easel/esl_msa_testfiles/afa/afa.good.1
+hmmer-3.2.1/easel/esl_msa_testfiles/afa/afa.good.2
+hmmer-3.2.1/easel/esl_msa_testfiles/afa/afa.good.3
+hmmer-3.2.1/easel/esl_msa_testfiles/psiblast/psiblast.good.2
+hmmer-3.2.1/easel/esl_msa_testfiles/psiblast/psiblast.good.1
+hmmer-3.2.1/easel/esl_msa_testfiles/a2m/a2m.good.2
+hmmer-3.2.1/easel/esl_msa_testfiles/a2m/a2m.good.1
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.12
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.13
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.14
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.9
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.7
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.6
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.good.1
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.1
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.8
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.11
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.10
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.good.4
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.4
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.good.3
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.3
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.good.2
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.2
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/selex.bad.5
+hmmer-3.2.1/easel/esl_msa_testfiles/selex/00MANIFEST
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.11
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.10
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.good.3
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.4
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.3
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.good.2
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.2
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.5
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.ambig.1
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.9
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.7
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.6
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.1
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.bad.8
+hmmer-3.2.1/easel/esl_msa_testfiles/phylip/phylip.good.1
+hmmer-3.2.1/easel/devkit/ctags-fix
+hmmer-3.2.1/easel/devkit/cexcerpt.man
+hmmer-3.2.1/easel/devkit/autodoc
+hmmer-3.2.1/easel/devkit/man2optlist
+hmmer-3.2.1/easel/devkit/sedition-pp
+hmmer-3.2.1/easel/devkit/00README
+hmmer-3.2.1/easel/devkit/rmanprocess.pl
+hmmer-3.2.1/easel/devkit/rmanprocess.py
+hmmer-3.2.1/easel/devkit/cexcerpt
+hmmer-3.2.1/easel/devkit/c2optlist
+hmmer-3.2.1/easel/devkit/sqc
+hmmer-3.2.1/easel/devkit/sedition
+hmmer-3.2.1/easel/m4/esl_avx.m4
+hmmer-3.2.1/easel/m4/esl_vmx.m4
+hmmer-3.2.1/easel/m4/ax_compiler_vendor.m4
+hmmer-3.2.1/easel/m4/ax_mpi.m4
+hmmer-3.2.1/easel/m4/esl_sse.m4
+hmmer-3.2.1/easel/m4/ax_check_compile_flag.m4
+hmmer-3.2.1/easel/m4/esl_avx512.m4
+hmmer-3.2.1/easel/m4/esl_sse4.m4
+hmmer-3.2.1/easel/m4/ax_check_gnu_make.m4
+hmmer-3.2.1/easel/m4/ax_gcc_func_attribute.m4
+hmmer-3.2.1/easel/m4/ax_pthread.m4
+hmmer-3.2.1/easel/m4/esl_neon.m4
+hmmer-3.2.1/easel/testsuite/i2-ncbi-indices.pl
+hmmer-3.2.1/easel/testsuite/trna-ssdraw.ps
+hmmer-3.2.1/easel/testsuite/e2.sh
+hmmer-3.2.1/easel/testsuite/parse_test_results.py
+hmmer-3.2.1/easel/testsuite/i3-blank-gf.pl
+hmmer-3.2.1/easel/testsuite/i1-degen-residues.pl
+hmmer-3.2.1/easel/testsuite/valgrind_report.pl
+hmmer-3.2.1/easel/testsuite/testsuite.sqc
+hmmer-3.2.1/easel/testsuite/trna-5.stk
+hmmer-3.2.1/easel/testsuite/Makefile.in
+hmmer-3.2.1/easel/testsuite/coverage_report.pl
+hmmer-3.2.1/easel/demotic/fasta2profmark
+hmmer-3.2.1/easel/demotic/blast2tbl
+hmmer-3.2.1/easel/demotic/demotic_infernal_tab.pm
+hmmer-3.2.1/easel/demotic/regress/
+hmmer-3.2.1/easel/demotic/demotic_blast.pm
+hmmer-3.2.1/easel/demotic/00README
+hmmer-3.2.1/easel/demotic/test.pl
+hmmer-3.2.1/easel/demotic/demotic_fasta.pm
+hmmer-3.2.1/easel/demotic/hmmer2profmark
+hmmer-3.2.1/easel/demotic/infernal_tab2gff.pl
+hmmer-3.2.1/easel/demotic/demotic_hmmer.pm
+hmmer-3.2.1/easel/demotic/examples/
+hmmer-3.2.1/easel/demotic/blast2profmark
+hmmer-3.2.1/easel/demotic/h22tbl
+hmmer-3.2.1/easel/demotic/fasta2tbl
+hmmer-3.2.1/easel/demotic/h22profmark
+hmmer-3.2.1/easel/demotic/demotic_h2.pm
+hmmer-3.2.1/easel/demotic/hmmer2tbl
+hmmer-3.2.1/easel/demotic/examples/example-single.fa.pin
+hmmer-3.2.1/easel/demotic/examples/example-single-psiquery.fa
+hmmer-3.2.1/easel/demotic/examples/example-single.pbl
+hmmer-3.2.1/easel/demotic/examples/example.hmm
+hmmer-3.2.1/easel/demotic/examples/example.hmmsearch.out
+hmmer-3.2.1/easel/demotic/examples/example-single.fa.psq
+hmmer-3.2.1/easel/demotic/examples/example.fa
+hmmer-3.2.1/easel/demotic/examples/example.ssearch.out
+hmmer-3.2.1/easel/demotic/examples/example-single.fa
+hmmer-3.2.1/easel/demotic/examples/example.sto
+hmmer-3.2.1/easel/demotic/examples/example.hmm2
+hmmer-3.2.1/easel/demotic/examples/example-single.asnt
+hmmer-3.2.1/easel/demotic/examples/example.psiblast.out
+hmmer-3.2.1/easel/demotic/examples/example-single.sto
+hmmer-3.2.1/easel/demotic/examples/example.wu-blastp.out
+hmmer-3.2.1/easel/demotic/examples/example.fasta.out
+hmmer-3.2.1/easel/demotic/examples/example.h2.out
+hmmer-3.2.1/easel/demotic/examples/example.phmmer.out
+hmmer-3.2.1/easel/demotic/examples/example-single.fa.phr
+hmmer-3.2.1/easel/demotic/examples/example.ncbi-blastp.out
+hmmer-3.2.1/easel/demotic/regress/ssearch-profmark.out
+hmmer-3.2.1/easel/demotic/regress/hmmsearch-tbl.out
+hmmer-3.2.1/easel/demotic/regress/psiblast-profmark.out
+hmmer-3.2.1/easel/demotic/regress/h2-tbl.out
+hmmer-3.2.1/easel/demotic/regress/ncbi-blastp-tbl.out
+hmmer-3.2.1/easel/demotic/regress/wu-blastp-profmark.out
+hmmer-3.2.1/easel/demotic/regress/ncbi-blastp-profmark.out
+hmmer-3.2.1/easel/demotic/regress/wu-blastp-tbl.out
+hmmer-3.2.1/easel/demotic/regress/fasta-profmark.out
+hmmer-3.2.1/easel/demotic/regress/h2-profmark.out
+hmmer-3.2.1/easel/demotic/regress/fasta-tbl.out
+hmmer-3.2.1/easel/demotic/regress/phmmer-profmark.out
+hmmer-3.2.1/easel/demotic/regress/phmmer-tbl.out
+hmmer-3.2.1/easel/demotic/regress/ssearch-tbl.out
+hmmer-3.2.1/easel/demotic/regress/hmmsearch-profmark.out
+hmmer-3.2.1/easel/demotic/regress/psiblast-tbl.out
+hmmer-3.2.1/easel/formats/fasta.bad.1
+hmmer-3.2.1/easel/formats/wag.dat
+hmmer-3.2.1/easel/formats/BLOSUM62
+hmmer-3.2.1/easel/formats/fasta
+hmmer-3.2.1/easel/formats/fasta.2
+hmmer-3.2.1/easel/formats/fasta.bad.2
+hmmer-3.2.1/easel/formats/genbank.2
+hmmer-3.2.1/easel/formats/fasta.bad.3
+hmmer-3.2.1/easel/formats/embl
+hmmer-3.2.1/easel/formats/uniprot
+hmmer-3.2.1/easel/formats/genbank
+hmmer-3.2.1/easel/formats/stockholm.1
+hmmer-3.2.1/easel/formats/genbank.bad.1
+hmmer-3.2.1/easel/formats/fasta.odd.1
+hmmer-3.2.1/easel/documentation/copyright.tex
+hmmer-3.2.1/easel/documentation/intro.tex
+hmmer-3.2.1/easel/documentation/format_stockholm.tex
+hmmer-3.2.1/easel/documentation/typography.tex
+hmmer-3.2.1/easel/documentation/format_ncbi.tex
+hmmer-3.2.1/easel/documentation/macros.tex
+hmmer-3.2.1/easel/documentation/doctricks.tex
+hmmer-3.2.1/easel/documentation/install.tex
+hmmer-3.2.1/easel/documentation/main.tex
+hmmer-3.2.1/easel/documentation/format_wuss.tex
+hmmer-3.2.1/easel/documentation/format_a2m.tex
+hmmer-3.2.1/easel/documentation/figures/
+hmmer-3.2.1/easel/documentation/codestyle.tex
+hmmer-3.2.1/easel/documentation/titlepage.tex
+hmmer-3.2.1/easel/documentation/Makefile.in
+hmmer-3.2.1/easel/documentation/installation.tex
+hmmer-3.2.1/easel/documentation/statistics.tex
+hmmer-3.2.1/easel/documentation/figures/rnaseP-bsu-alignment.pdf
+hmmer-3.2.1/easel/documentation/figures/rna_elements.pdf
+hmmer-3.2.1/easel/documentation/figures/evd_basic.pdf
+hmmer-3.2.1/easel/documentation/figures/rna_elements.ai
+hmmer-3.2.1/easel/documentation/figures/rnaseP-bsu-alignment.ai
+hmmer-3.2.1/easel/documentation/figures/evd_location.pdf
+hmmer-3.2.1/easel/documentation/figures/gev_density.pdf
+hmmer-3.2.1/easel/documentation/figures/rnaseP-ecoli.pdf
+hmmer-3.2.1/easel/documentation/figures/rnaseP-ecoli.eps
+hmmer-3.2.1/easel/documentation/figures/rnaseP-ecoli.ai
+hmmer-3.2.1/easel/documentation/figures/rnaseP-bsu-alignment.eps
+hmmer-3.2.1/easel/documentation/figures/evd_scale.pdf
+hmmer-3.2.1/easel/documentation/figures/gev_logdensity.pdf
+hmmer-3.2.1/easel/documentation/figures/rna_elements.eps
+hmmer-3.2.1/easel/miniapps/esl-seqstat.c
+hmmer-3.2.1/easel/miniapps/esl-alimask.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-alimanip.c
+hmmer-3.2.1/easel/miniapps/esl-alimanip.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-compalign.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-shuffle.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-mask.man.in
+hmmer-3.2.1/easel/miniapps/esl-alimap.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-alistat.c
+hmmer-3.2.1/easel/miniapps/esl-translate.c
+hmmer-3.2.1/easel/miniapps/esl-shuffle.man.in
+hmmer-3.2.1/easel/miniapps/esl-alistat.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-mask.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-reformat.c
+hmmer-3.2.1/easel/miniapps/esl-histplot.c
+hmmer-3.2.1/easel/miniapps/esl-alirev.c
+hmmer-3.2.1/easel/miniapps/esl-alimerge.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-reformat.man.in
+hmmer-3.2.1/easel/miniapps/esl-seqrange.c
+hmmer-3.2.1/easel/miniapps/esl-seqstat.man.in
+hmmer-3.2.1/easel/miniapps/esl-shuffle.c
+hmmer-3.2.1/easel/miniapps/esl-translate.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-seqrange.man.in
+hmmer-3.2.1/easel/miniapps/esl-compstruct.c
+hmmer-3.2.1/easel/miniapps/esl-alimap.c
+hmmer-3.2.1/easel/miniapps/esl-alimap.man.in
+hmmer-3.2.1/easel/miniapps/esl-translate.man.in
+hmmer-3.2.1/easel/miniapps/esl-afetch.man.in
+hmmer-3.2.1/easel/miniapps/esl-alimerge.c
+hmmer-3.2.1/easel/miniapps/esl-compalign.c
+hmmer-3.2.1/easel/miniapps/esl-construct.c
+hmmer-3.2.1/easel/miniapps/esl-ssdraw.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-alimask.c
+hmmer-3.2.1/easel/miniapps/esl-alimanip.man.in
+hmmer-3.2.1/easel/miniapps/esl-mask.c
+hmmer-3.2.1/easel/miniapps/esl-weight.man.in
+hmmer-3.2.1/easel/miniapps/esl-alipid.c
+hmmer-3.2.1/easel/miniapps/esl-alimask.man.in
+hmmer-3.2.1/easel/miniapps/esl-weight.c
+hmmer-3.2.1/easel/miniapps/esl-ssdraw.man.in
+hmmer-3.2.1/easel/miniapps/esl-seqrange.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-histplot.man.in
+hmmer-3.2.1/easel/miniapps/esl-construct.itest.pl
+hmmer-3.2.1/easel/miniapps/esl-afetch.c
+hmmer-3.2.1/easel/miniapps/esl-alimerge.man.in
+hmmer-3.2.1/easel/miniapps/esl-ssdraw.c
+hmmer-3.2.1/easel/miniapps/esl-selectn.c
+hmmer-3.2.1/easel/miniapps/esl-alipid.man.in
+hmmer-3.2.1/easel/miniapps/esl-selectn.man.in
+hmmer-3.2.1/easel/miniapps/esl-construct.man.in
+hmmer-3.2.1/easel/miniapps/esl-alirev.man.in
+hmmer-3.2.1/easel/miniapps/esl-afetch.itest.pl
+hmmer-3.2.1/easel/miniapps/Makefile.in
+hmmer-3.2.1/easel/miniapps/esl-sfetch.c
+hmmer-3.2.1/easel/miniapps/esl-alistat.man.in
+hmmer-3.2.1/easel/miniapps/esl-compalign.man.in
+hmmer-3.2.1/easel/miniapps/esl-sfetch.man.in
+hmmer-3.2.1/easel/miniapps/esl-compstruct.man.in
+hmmer-3.2.1/profmark/x-h2-ls
+hmmer-3.2.1/profmark/x-psiblast+
+hmmer-3.2.1/profmark/x-h2-fs
+hmmer-3.2.1/profmark/x-single-ssearch
+hmmer-3.2.1/profmark/pmark-master.pl
+hmmer-3.2.1/profmark/x-iterate-psiblast
+hmmer-3.2.1/profmark/x-fps-fasta
+hmmer-3.2.1/profmark/00README
+hmmer-3.2.1/profmark/x-fps-ssearch
+hmmer-3.2.1/profmark/x-phmmer-consensus
+hmmer-3.2.1/profmark/rocplot.pl
+hmmer-3.2.1/profmark/x-single-phmmer
+hmmer-3.2.1/profmark/x-fps-ncbiblast+
+hmmer-3.2.1/profmark/x-hmmsearch
+hmmer-3.2.1/profmark/x-sam
+hmmer-3.2.1/profmark/x-iterate-jackhmmer
+hmmer-3.2.1/profmark/rocplot.c
+hmmer-3.2.1/profmark/pmark.param
+hmmer-3.2.1/profmark/x-fps-wublast
+hmmer-3.2.1/profmark/create-profmark.c
+hmmer-3.2.1/profmark/x-hmmsearch-max
+hmmer-3.2.1/profmark/x-fps-ncbiblast
+hmmer-3.2.1/profmark/x-fps-phmmer
+hmmer-3.2.1/profmark/Makefile.in
+hmmer-3.2.1/profmark/x-single-ncbiblast
+hmmer-3.2.1/profmark/x-psiblast
+hmmer-3.2.1/testsuite/20aa-alitest.afa
+hmmer-3.2.1/testsuite/20aa-alitest.phr
+hmmer-3.2.1/testsuite/RRM_1.sto
+hmmer-3.2.1/testsuite/3box-alitest.nhr
+hmmer-3.2.1/testsuite/20aa-alitest.sto
+hmmer-3.2.1/testsuite/i15-hmmconvert.pl
+hmmer-3.2.1/testsuite/i19-hmmpgmd-ga.pl
+hmmer-3.2.1/testsuite/2OG-FeII_Oxy_3.hmm
+hmmer-3.2.1/testsuite/20aa-alitest.psi
+hmmer-3.2.1/testsuite/RRM_1.hmm
+hmmer-3.2.1/testsuite/h3.pm
+hmmer-3.2.1/testsuite/3box-alitest.fa
+hmmer-3.2.1/testsuite/3box-alitest.nsi
+hmmer-3.2.1/testsuite/XYPPX.hmm
+hmmer-3.2.1/testsuite/i8-nonresidues.pl
+hmmer-3.2.1/testsuite/i7-hmmbuild-fragments.pl
+hmmer-3.2.1/testsuite/i11-hmmalign-mapali.pl
+hmmer-3.2.1/testsuite/i21-rewind.pl
+hmmer-3.2.1/testsuite/20aa-alitest.pog
+hmmer-3.2.1/testsuite/i12-delete-corruption.pl
+hmmer-3.2.1/testsuite/XYPPX.sto
+hmmer-3.2.1/testsuite/3box-alitest.nog
+hmmer-3.2.1/testsuite/i2-search-variation.sh
+hmmer-3.2.1/testsuite/ecori.hmm
+hmmer-3.2.1/testsuite/i18-nhmmer-generic.pl
+hmmer-3.2.1/testsuite/ecori.fa
+hmmer-3.2.1/testsuite/20aa.hmm
+hmmer-3.2.1/testsuite/parse_test_results.py
+hmmer-3.2.1/testsuite/3box.hmm
+hmmer-3.2.1/testsuite/M1.sto
+hmmer-3.2.1/testsuite/i14-hmmemit-consensus.pl
+hmmer-3.2.1/testsuite/2OG-FeII_Oxy_3-nt.hmm
+hmmer-3.2.1/testsuite/PSE.sto
+hmmer-3.2.1/testsuite/minifam
+hmmer-3.2.1/testsuite/20aa-alitest.psd
+hmmer-3.2.1/testsuite/PSE.hmm
+hmmer-3.2.1/testsuite/rndseq400-10.fa
+hmmer-3.2.1/testsuite/M1.hmm
+hmmer-3.2.1/testsuite/20aa-alitest.psq
+hmmer-3.2.1/testsuite/testsuite.sqc
+hmmer-3.2.1/testsuite/3box-alitest.nsd
+hmmer-3.2.1/testsuite/3box.sto
+hmmer-3.2.1/testsuite/20aa.sto
+hmmer-3.2.1/testsuite/ecori.sto
+hmmer-3.2.1/testsuite/i3-seqsearch-variation.sh
+hmmer-3.2.1/testsuite/3box-alitest.nsq
+hmmer-3.2.1/testsuite/LuxC.hmm
+hmmer-3.2.1/testsuite/SMC_N.sto
+hmmer-3.2.1/testsuite/Caudal_act.sto
+hmmer-3.2.1/testsuite/PAX8_HUMAN
+hmmer-3.2.1/testsuite/i5-hmmbuild-naming.pl
+hmmer-3.2.1/testsuite/20aa-alitest.fa
+hmmer-3.2.1/testsuite/i17-stdin.pl
+hmmer-3.2.1/testsuite/Patched.hmm
+hmmer-3.2.1/testsuite/i1-build-variation.sh
+hmmer-3.2.1/testsuite/Patched.sto
+hmmer-3.2.1/testsuite/Makefile.in
+hmmer-3.2.1/testsuite/i4-zerolength-seqs.sh
+hmmer-3.2.1/testsuite/Caudal_act.hmm
+hmmer-3.2.1/testsuite/i10-duplicate-names.pl
+hmmer-3.2.1/testsuite/3box-alitest.nin
+hmmer-3.2.1/testsuite/i6-hmmalign-mapali.pl
+hmmer-3.2.1/testsuite/SMC_N.hmm
+hmmer-3.2.1/testsuite/i20-fmindex-core.pl
+hmmer-3.2.1/testsuite/i9-optional-annotation.pl
+hmmer-3.2.1/testsuite/LuxC.sto
+hmmer-3.2.1/testsuite/20aa-alitest.pin
+hmmer-3.2.1/testsuite/i16-build-allins.pl
+hmmer-3.2.1/testsuite/i13-msa-integrity.pl
+hmmer-3.2.1/test-speed/x-psiblast+
+hmmer-3.2.1/test-speed/x-ssearch
+hmmer-3.2.1/test-speed/00README
+hmmer-3.2.1/test-speed/x-hmmer2
+hmmer-3.2.1/test-speed/x-ncbiblast+
+hmmer-3.2.1/test-speed/speed-master.pl
+hmmer-3.2.1/test-speed/speedA-list.pl
+hmmer-3.2.1/test-speed/x-hmmsearch
+hmmer-3.2.1/test-speed/x-sam
+hmmer-3.2.1/test-speed/component-benchmark.pl
+hmmer-3.2.1/test-speed/x-ncbiblast
+hmmer-3.2.1/test-speed/x-wublast
+hmmer-3.2.1/test-speed/x-fasta
+hmmer-3.2.1/test-speed/x-psiblast
+hmmer-3.2.1/libdivsufsort/AUTHORS
+hmmer-3.2.1/libdivsufsort/divsufsort.h.in
+hmmer-3.2.1/libdivsufsort/divsufsort.c
+hmmer-3.2.1/libdivsufsort/README
+hmmer-3.2.1/libdivsufsort/COPYING
+hmmer-3.2.1/libdivsufsort/VERSION
+hmmer-3.2.1/libdivsufsort/Makefile.in
+hmmer-3.2.1/tutorial/MADE1.sto
+hmmer-3.2.1/tutorial/Pkinase.hmm
+hmmer-3.2.1/tutorial/Pkinase.sto
+hmmer-3.2.1/tutorial/dna_target.fa
+hmmer-3.2.1/tutorial/MADE1.hmm
+hmmer-3.2.1/tutorial/globins45.fa
+hmmer-3.2.1/tutorial/fn3.hmm
+hmmer-3.2.1/tutorial/fn3.sto
+hmmer-3.2.1/tutorial/globins4.sto
+hmmer-3.2.1/tutorial/globins4.hmm
+hmmer-3.2.1/tutorial/7LESS_DROME
+hmmer-3.2.1/tutorial/HBB_HUMAN
+hmmer-3.2.1/documentation/man/
+hmmer-3.2.1/documentation/userguide/
+hmmer-3.2.1/documentation/Makefile.in
+hmmer-3.2.1/documentation/userguide/tufte-common-local.tex
+hmmer-3.2.1/documentation/userguide/tutorial.tex
+hmmer-3.2.1/documentation/userguide/macros.tex
+hmmer-3.2.1/documentation/userguide/install.tex
+hmmer-3.2.1/documentation/userguide/inclusions/
+hmmer-3.2.1/documentation/userguide/tufte-book.cls
+hmmer-3.2.1/documentation/userguide/main.tex
+hmmer-3.2.1/documentation/userguide/tabular.tex
+hmmer-3.2.1/documentation/userguide/copyright.tex.in
+hmmer-3.2.1/documentation/userguide/formats.tex
+hmmer-3.2.1/documentation/userguide/introduction.tex
+hmmer-3.2.1/documentation/userguide/tufte-common.def
+hmmer-3.2.1/documentation/userguide/unsrtnat-brief.bst
+hmmer-3.2.1/documentation/userguide/titlepage.tex.in
+hmmer-3.2.1/documentation/userguide/glossary.tex
+hmmer-3.2.1/documentation/userguide/pipeline.tex
+hmmer-3.2.1/documentation/userguide/distilled.bib
+hmmer-3.2.1/documentation/userguide/Makefile.in
+hmmer-3.2.1/documentation/userguide/hmmbuild.tex
+hmmer-3.2.1/documentation/userguide/ack.tex
+hmmer-3.2.1/documentation/userguide/inclusions/hmmscan-noargs.out
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-globins.out
+hmmer-3.2.1/documentation/userguide/inclusions/hmmalign-globins.out2
+hmmer-3.2.1/documentation/userguide/inclusions/hmmbuild-noargs.out
+hmmer-3.2.1/documentation/userguide/inclusions/inclusions.def
+hmmer-3.2.1/documentation/userguide/inclusions/jackhmmer-hbb-uniprot.out4
+hmmer-3.2.1/documentation/userguide/inclusions/jackhmmer-hbb-uniprot.out3
+hmmer-3.2.1/documentation/userguide/inclusions/nhmmer-made1.out3
+hmmer-3.2.1/documentation/userguide/inclusions/nhmmer-made1.out4
+hmmer-3.2.1/documentation/userguide/inclusions/hmmpress-minifam.out
+hmmer-3.2.1/documentation/userguide/inclusions/nhmmer-made1.out5
+hmmer-3.2.1/documentation/userguide/inclusions/nhmmer-made1.out2
+hmmer-3.2.1/documentation/userguide/inclusions/jackhmmer-hbb-uniprot.out2
+hmmer-3.2.1/documentation/userguide/inclusions/jackhmmer-hbb-uniprot.out5
+hmmer-3.2.1/documentation/userguide/inclusions/hmmscan-minifam-sevenless.out
+hmmer-3.2.1/documentation/userguide/inclusions/hmmbuild-globins.out2
+hmmer-3.2.1/documentation/userguide/inclusions/jackhmmer-hbb-uniprot.out
+hmmer-3.2.1/documentation/userguide/inclusions/hmmbuild-globins.out
+hmmer-3.2.1/documentation/userguide/inclusions/nhmmer-made1.out
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-fn3-sevenless.out2
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-fn3-uniprot.out
+hmmer-3.2.1/documentation/userguide/inclusions/hmmalign-globins.out
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-fn3-sevenless.out4
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-fn3-sevenless.out3
+hmmer-3.2.1/documentation/userguide/inclusions/jackhmmer-hbb-uniprot.out7
+hmmer-3.2.1/documentation/userguide/inclusions/hmmscan-minifam-sevenless.out2
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-globins.out2
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-globins.out3
+hmmer-3.2.1/documentation/userguide/inclusions/hmmscan-minifam-sevenless.out3
+hmmer-3.2.1/documentation/userguide/inclusions/hmmbuild-made1.out
+hmmer-3.2.1/documentation/userguide/inclusions/jackhmmer-hbb-uniprot.out6
+hmmer-3.2.1/documentation/userguide/inclusions/globins4.sto
+hmmer-3.2.1/documentation/userguide/inclusions/gen-inclusions.py
+hmmer-3.2.1/documentation/userguide/inclusions/hmmsearch-fn3-sevenless.out
+hmmer-3.2.1/documentation/userguide/inclusions/sevenless_domains.out
+hmmer-3.2.1/documentation/man/nhmmscan.man.in
+hmmer-3.2.1/documentation/man/phmmer.man.in
+hmmer-3.2.1/documentation/man/makehmmerdb.man.in
+hmmer-3.2.1/documentation/man/hmmconvert.man.in
+hmmer-3.2.1/documentation/man/hmmalign.man.in
+hmmer-3.2.1/documentation/man/hmmpgmd.man.in
+hmmer-3.2.1/documentation/man/hmmstat.man.in
+hmmer-3.2.1/documentation/man/alimask.man.in
+hmmer-3.2.1/documentation/man/hmmpress.man.in
+hmmer-3.2.1/documentation/man/hmmfetch.man.in
+hmmer-3.2.1/documentation/man/nhmmer.man.in
+hmmer-3.2.1/documentation/man/hmmsearch.man.in
+hmmer-3.2.1/documentation/man/hmmer.man.in
+hmmer-3.2.1/documentation/man/hmmsim.man.in
+hmmer-3.2.1/documentation/man/hmmlogo.man.in
+hmmer-3.2.1/documentation/man/jackhmmer.man.in
+hmmer-3.2.1/documentation/man/hmmbuild.man.in
+hmmer-3.2.1/documentation/man/hmmemit.man.in
+hmmer-3.2.1/documentation/man/Makefile.in
+hmmer-3.2.1/documentation/man/hmmscan.man.in
+[cb2@localhost hmmer]$ cd hmmer-3.2.1/
+[cb2@localhost hmmer-3.2.1]$ ls
+config.guess  documentation  libdivsufsort  profmark       test-speed
+config.sub    easel          LICENSE        README.md      testsuite
+configure     INSTALL        Makefile.in    RELEASE-3.2.1  tutorial
+configure.ac  install-sh     makeTAGS.sh    src            Userguide.pdf
+[cb2@localhost hmmer-3.2.1]$ ./configure 
+configure: Configuring HMMER3 for your system.
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ranlib... ranlib
+checking for ar... /usr/bin/ar
+checking whether ln -s works... yes
+checking for C compiler vendor... gnu
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for gcc -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking whether gcc -std=gnu99 is Clang... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking whether gcc -std=gnu99 can compile our Altivec/VMX code... no
+checking whether gcc -std=gnu99 can compile our SSE code... yes
+configure: Activating Intel/AMD SSE vector DP implementation
+checking whether _MM_SET_FLUSH_ZERO_MODE is supported... yes
+checking compiler support --start-group... yes
+checking for gzip... /usr/bin/gzip
+checking for library containing clock_gettime... none required
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for sys/sysctl.h... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for off_t... yes
+checking whether byte ordering is bigendian... no
+checking for __attribute__((noreturn))... yes
+checking for __attribute__((format))... yes
+checking for mkstemp... yes
+checking for popen... yes
+checking for putenv... yes
+checking for strcasecmp... yes
+checking for strsep... yes
+checking for times... yes
+checking for getpid... yes
+checking for sysctl... yes
+checking for sysconf... yes
+checking for getcwd... yes
+checking for chmod... yes
+checking for stat... yes
+checking for fstat... yes
+checking for erfc... no
+checking for library containing ntohs... none required
+checking for library containing ntohl... none required
+checking for library containing htons... none required
+checking for library containing htonl... none required
+checking for library containing socket... none required
+checking for library containing inet_pton... none required
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating testsuite/Makefile
+config.status: creating profmark/Makefile
+config.status: creating src/impl_sse/Makefile
+config.status: creating documentation/Makefile
+config.status: creating documentation/man/Makefile
+config.status: creating documentation/userguide/Makefile
+config.status: creating libdivsufsort/Makefile
+config.status: creating easel/Makefile
+config.status: creating easel/miniapps/Makefile
+config.status: creating easel/testsuite/Makefile
+config.status: creating easel/documentation/Makefile
+config.status: creating documentation/userguide/titlepage.tex
+config.status: creating documentation/userguide/copyright.tex
+config.status: creating documentation/man/alimask.man
+config.status: creating documentation/man/hmmalign.man
+config.status: creating documentation/man/hmmbuild.man
+config.status: creating documentation/man/hmmconvert.man
+config.status: creating documentation/man/hmmemit.man
+config.status: creating documentation/man/hmmer.man
+config.status: creating documentation/man/hmmfetch.man
+config.status: creating documentation/man/hmmlogo.man
+config.status: creating documentation/man/hmmpgmd.man
+config.status: creating documentation/man/hmmpress.man
+config.status: creating documentation/man/hmmscan.man
+config.status: creating documentation/man/hmmsearch.man
+config.status: creating documentation/man/hmmsim.man
+config.status: creating documentation/man/hmmstat.man
+config.status: creating documentation/man/jackhmmer.man
+config.status: creating documentation/man/makehmmerdb.man
+config.status: creating documentation/man/nhmmer.man
+config.status: creating documentation/man/nhmmscan.man
+config.status: creating documentation/man/phmmer.man
+config.status: creating easel/miniapps/esl-afetch.man
+config.status: creating easel/miniapps/esl-alimanip.man
+config.status: creating easel/miniapps/esl-alimap.man
+config.status: creating easel/miniapps/esl-alimask.man
+config.status: creating easel/miniapps/esl-alimerge.man
+config.status: creating easel/miniapps/esl-alipid.man
+config.status: creating easel/miniapps/esl-alirev.man
+config.status: creating easel/miniapps/esl-alistat.man
+config.status: creating easel/miniapps/esl-compalign.man
+config.status: creating easel/miniapps/esl-compstruct.man
+config.status: creating easel/miniapps/esl-construct.man
+config.status: creating easel/miniapps/esl-histplot.man
+config.status: creating easel/miniapps/esl-mask.man
+config.status: creating easel/miniapps/esl-reformat.man
+config.status: creating easel/miniapps/esl-selectn.man
+config.status: creating easel/miniapps/esl-seqrange.man
+config.status: creating easel/miniapps/esl-seqstat.man
+config.status: creating easel/miniapps/esl-sfetch.man
+config.status: creating easel/miniapps/esl-shuffle.man
+config.status: creating easel/miniapps/esl-ssdraw.man
+config.status: creating easel/miniapps/esl-translate.man
+config.status: creating easel/miniapps/esl-weight.man
+config.status: creating easel/decoy_config.h
+config.status: creating src/p7_config.h
+config.status: creating easel/esl_config.h
+config.status: creating libdivsufsort/divsufsort.h
+config.status: linking src/impl_sse to src/impl
+
+
+HMMER configuration:
+     compiler:             gcc -std=gnu99 -O3   -pthread
+     host:                 x86_64-pc-linux-gnu
+     linker:               
+     libraries:              
+     DP implementation:    sse
+
+Do 'make'  to build HMMER, and optionally:
+   'make check'  to run self tests,
+   'make install'  to install programs and man pages,
+   '(cd easel; make install)'  to install Easel tools.
+
+[cb2@localhost hmmer-3.2.1]$ ls Make*
+Makefile  Makefile.in
+make 
+cd src
+finds actually runable code 
+[cb2@localhost hmmer-3.2.1]$ echo "hello world"
+hello world
+[cb2@localhost hmmer-3.2.1]$ ech "hello world"
+bash: ech: command not found...
+[cb2@localhost hmmer-3.2.1]$ echo "hello world" && echo "Ran correct"
+hello world
+Ran correct
+[cb2@localhost hmmer-3.2.1]$ 
+[cb2@localhost hmmer-3.2.1]$ echo "hello world"> out.tmp  && mv out.tmp out.file 
+[cb2@localhost hmmer-3.2.1]$ ls
+config.guess   configure.ac   libdivsufsort  out.file       test-speed
+config.log     documentation  LICENSE        profmark       testsuite
+config.status  easel          Makefile       README.md      tutorial
+config.sub     INSTALL        Makefile.in    RELEASE-3.2.1  Userguide.pdf
+configure      install-sh     makeTAGS.sh    src
+[cb2@localhost hmmer-3.2.1]$ gedit out.file 
+[cb2@localhost hmmer-3.2.1]$ cd media/SF_D_DRIVE
+bash: cd: media/SF_D_DRIVE: No such file or directory
+[cb2@localhost hmmer-3.2.1]$ 
+$ cat homologene.data | grep P53 | grep 460 | less
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53 | grep "^460" | less
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53 | grep "^460" | cut -f 5 
+120407068
+332847216
+114051852
+50978974
+28849929
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53 | grep "^460" | cut -f 5 > p53.ids.txt ITS A CASE SENSITIVE
+[cb2@localhost sf_D_DRIVE]$ ls
+9606.tsv             cb2-firstassignment.git  count.txt             hammer              index.html     p53.ids.txt
+cb2-101-2019         cb2.tar                  domaincount.txt       hmmer-3.2.1.tar.gz  index.html.1   $RECYCLE.BIN
+cb2-firstassignment  cg2.tar                  ftp.ncbi.nlm.nih.gov  homologene.data     NC_000913.faa  System Volume Information
+[cb2@localhost sf_D_DRIVE]$ 
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep -i P53 | grep "^460" | cut -f 5 > p53.ids.txt
+[cb2@localhost sf_D_DRIVE]$ gedit p53.ids.txt 
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep -w  "^460" | cut -f 5 > p53.ids.txt
+[cb2@localhost sf_D_DRIVE]$ lw -c p53.ids.txt 
+bash: lw: command not found...
+[cb2@localhost sf_D_DRIVE]$ wc -c p53.ids.txt 
+87 p53.ids.txt
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep -w  "^460" | cut -f 5 | less
+[cb2@localhost sf_D_DRIVE]$ cat p53.ids.txt | wc -l
+9
+[cb2@localhost sf_D_DRIVE]$ cat p53.ids.txt | wc -
+      9       9      87 -
+[cb2@localhost sf_D_DRIVE]$ 
+[cb2@localhost sf_D_DRIVE]$ which hmmscan
+/usr/local/bin/hmmscan
+[cb2@localhost sf_D_DRIVE]$ wget --quiet ftp://ftp.ncbi.nih.gov/pub/HomoloGene/current/homologene.data
+
+^[[A^[[A^C
+[cb2@localhost sf_D_DRIVE]$ wget --quiet ftp://ftp.ncbi.nih.gov/pub/HomoloGene/current/homologene.data
+[cb2@localhost sf_D_DRIVE]$ ls
+9606.tsv             cb2-firstassignment.git  count.txt             hammer              index.html     $RECYCLE.BIN
+cb2-101-2019         cb2.tar                  domaincount.txt       hmmer-3.2.1.tar.gz  index.html.1   System Volume Information
+cb2-firstassignment  cg2.tar                  ftp.ncbi.nlm.nih.gov  homologene.data     NC_000913.faa
+[cb2@localhost sf_D_DRIVE]$ less homologene.data 
+[cb2@localhost sf_D_DRIVE]$ less homologene.data | grep P53
+460	9606	7157	TP53	120407068	NP_000537.3
+460	9598	455214	TP53	332847216	XP_001172077.2
+460	9544	716170	TP53	114051852	NP_001040616.1
+460	9615	403869	TP53	50978974	NP_001003210.1
+460	9913	281542	TP53	28849929	NP_776626.1
+3959	9606	7159	TP53BP2	112799849	NP_001026855.2
+3959	9598	457766	TP53BP2	332812020	XP_003308815.1
+3959	9544	705383	TP53BP2	297280708	XP_001093747.2
+3959	9615	490397	TP53BP2	345802544	XP_547518.3
+3959	9913	514474	TP53BP2	359073929	XP_002694012.2
+3959	9031	421329	TP53BP2	513174825	XP_419394.4
+4137	9606	7158	TP53BP1	213972636	NP_001135452.1
+4137	9598	467668	TP53BP1	332843712	XP_523062.3
+4137	9544	710237	TP53BP1	297296273	XP_001107285.2
+4137	9615	478274	TP53BP1	73999883	XP_849774.1
+4137	9913	509111	TP53BP1	329755331	NP_001193326.1
+4137	9031	415589	TP53BP1	513202344	XP_004944052.1
+4404	9606	9537	TP53I11	385251378	NP_001245251.1
+4404	9598	743617	TP53I11	332836233	XP_003313045.1
+4404	9615	483645	TP53I11	73983398	XP_540766.2
+4404	9913	515682	TP53I11	115496424	NP_001069193.1
+4404	9031	426399	TP53I11	383387812	NP_001244298.1
+6042	9606	112858	TP53RK	41327715	NP_291028.3
+6042	9598	458303	TP53RK	55652578	XP_514697.1
+6042	9615	611235	TP53RK	345790150	XP_853966.2
+6042	9913	619100	TP53RK	149643097	NP_001092650.1
+6042	9031	428145	TP53RK	363741774	XP_425703.3
+9995	9606	55135	WRAP53	221136858	NP_001137462.1
+9995	9598	455213	WRAP53	114666233	XP_001172037.1
+9995	9544	716125	WRAP53	109113139	XP_001110427.1
+9995	9615	607892	WRAP53	545497990	XP_005620047.1
+9995	9913	509631	WRAP53	78045553	NP_001030245.1
+11065	9606	94241	TP53INP1	15150807	NP_150601.1
+11065	9598	739304	TP53INP1	114620983	XP_001144789.1
+11065	9544	700632	TP53INP1	109086978	XP_001090592.1
+11065	9615	611710	TP53INP1	73999609	XP_854503.1
+11065	9913	782667	TP53INP1	329664116	NP_001192352.1
+11065	9031	420232	TP53INP1	71896503	NP_001026117.1
+16293	9606	90313	TP53I13	114431216	NP_612358.3
+16293	9598	736236	TP53I13	332848159	XP_001138177.2
+16293	9615	611028	TP53I13	545512001	XP_005624946.1
+16293	9913	513556	TP53I13	329664756	NP_001192688.1
+18648	9606	58476	TP53INP2	39930399	NP_067025.1
+18648	9598	745053	TP53INP2	114681575	XP_001160082.1
+18648	9544	707113	TP53INP2	109092272	XP_001103915.1
+18648	9615	610064	TP53INP2	545540417	XP_005635009.1
+18648	9913	511340	TP53INP2	359071905	XP_003586891.1
+18648	9031	769066	TP53INP2	118100468	XP_001232258.1
+34521	9606	54532	USP53	148539600	NP_061923.2
+34521	9598	461457	USP53	114595829	XP_517410.2
+34521	9544	705228	USP53	297293284	XP_001098826.2
+34521	9615	487923	USP53	345795898	XP_545046.3
+34521	9913	529462	USP53	359066290	XP_003586226.1
+34521	9031	422680	USP53	513183579	XP_420633.4
+36617	9606	9540	TP53I3	22538446	NP_671713.1
+36617	9598	459062	TP53I3	332812884	XP_001144287.2
+36617	9544	704206	TP53I3	109102170	XP_001098989.1
+36617	9615	610825	TP53I3	73980612	XP_853476.1
+36617	9913	508875	TP53I3	115496037	NP_001068846.1
+36617	9031	421977	TP53I3	513179140	XP_004935850.1
+44130	4932	855957	NOP53	6325111	NP_015179.1
+49386	9606	27296	TP53TG5	7656983	NP_055292.1
+49386	9598	469954	TP53TG5	114682187	XP_525338.2
+49386	9544	710738	TP53TG5	109091816	XP_001108534.1
+49386	9615	477242	TP53TG5	545540883	XP_005635169.1
+49386	9913	100138069	TP53TG5	528974674	XP_005215097.1
+91263	3702	832764	RLP53	15240433	NP_198058.1
+108155	9606	729355	TP53TG3B	153791741	NP_001093157.1
+108155	9606	24150	TP53TG3	7706743	NP_057296.1
+108155	9606	653550	TP53TG3C	327532730	NP_001192188.1
+108155	9606	729264	TP53TG3D	343962650	NP_001230651.1
+130838	3702	825415	BZIP53	15228754	NP_191801.1
+135219	3702	828637	FKBP53	18416534	NP_567717.1
+137113	4932	854276	INP53	398365141	NP_014752.3
+137360	9606	63970	TP53AIP1	304434534	NP_071395.2
+137360	9598	100609662	TP53AIP1	410046063	XP_003952119.1
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53
+460	9606	7157	TP53	120407068	NP_000537.3
+460	9598	455214	TP53	332847216	XP_001172077.2
+460	9544	716170	TP53	114051852	NP_001040616.1
+460	9615	403869	TP53	50978974	NP_001003210.1
+460	9913	281542	TP53	28849929	NP_776626.1
+3959	9606	7159	TP53BP2	112799849	NP_001026855.2
+3959	9598	457766	TP53BP2	332812020	XP_003308815.1
+3959	9544	705383	TP53BP2	297280708	XP_001093747.2
+3959	9615	490397	TP53BP2	345802544	XP_547518.3
+3959	9913	514474	TP53BP2	359073929	XP_002694012.2
+3959	9031	421329	TP53BP2	513174825	XP_419394.4
+4137	9606	7158	TP53BP1	213972636	NP_001135452.1
+4137	9598	467668	TP53BP1	332843712	XP_523062.3
+4137	9544	710237	TP53BP1	297296273	XP_001107285.2
+4137	9615	478274	TP53BP1	73999883	XP_849774.1
+4137	9913	509111	TP53BP1	329755331	NP_001193326.1
+4137	9031	415589	TP53BP1	513202344	XP_004944052.1
+4404	9606	9537	TP53I11	385251378	NP_001245251.1
+4404	9598	743617	TP53I11	332836233	XP_003313045.1
+4404	9615	483645	TP53I11	73983398	XP_540766.2
+4404	9913	515682	TP53I11	115496424	NP_001069193.1
+4404	9031	426399	TP53I11	383387812	NP_001244298.1
+6042	9606	112858	TP53RK	41327715	NP_291028.3
+6042	9598	458303	TP53RK	55652578	XP_514697.1
+6042	9615	611235	TP53RK	345790150	XP_853966.2
+6042	9913	619100	TP53RK	149643097	NP_001092650.1
+6042	9031	428145	TP53RK	363741774	XP_425703.3
+9995	9606	55135	WRAP53	221136858	NP_001137462.1
+9995	9598	455213	WRAP53	114666233	XP_001172037.1
+9995	9544	716125	WRAP53	109113139	XP_001110427.1
+9995	9615	607892	WRAP53	545497990	XP_005620047.1
+9995	9913	509631	WRAP53	78045553	NP_001030245.1
+11065	9606	94241	TP53INP1	15150807	NP_150601.1
+11065	9598	739304	TP53INP1	114620983	XP_001144789.1
+11065	9544	700632	TP53INP1	109086978	XP_001090592.1
+11065	9615	611710	TP53INP1	73999609	XP_854503.1
+11065	9913	782667	TP53INP1	329664116	NP_001192352.1
+11065	9031	420232	TP53INP1	71896503	NP_001026117.1
+16293	9606	90313	TP53I13	114431216	NP_612358.3
+16293	9598	736236	TP53I13	332848159	XP_001138177.2
+16293	9615	611028	TP53I13	545512001	XP_005624946.1
+16293	9913	513556	TP53I13	329664756	NP_001192688.1
+18648	9606	58476	TP53INP2	39930399	NP_067025.1
+18648	9598	745053	TP53INP2	114681575	XP_001160082.1
+18648	9544	707113	TP53INP2	109092272	XP_001103915.1
+18648	9615	610064	TP53INP2	545540417	XP_005635009.1
+18648	9913	511340	TP53INP2	359071905	XP_003586891.1
+18648	9031	769066	TP53INP2	118100468	XP_001232258.1
+34521	9606	54532	USP53	148539600	NP_061923.2
+34521	9598	461457	USP53	114595829	XP_517410.2
+34521	9544	705228	USP53	297293284	XP_001098826.2
+34521	9615	487923	USP53	345795898	XP_545046.3
+34521	9913	529462	USP53	359066290	XP_003586226.1
+34521	9031	422680	USP53	513183579	XP_420633.4
+36617	9606	9540	TP53I3	22538446	NP_671713.1
+36617	9598	459062	TP53I3	332812884	XP_001144287.2
+36617	9544	704206	TP53I3	109102170	XP_001098989.1
+36617	9615	610825	TP53I3	73980612	XP_853476.1
+36617	9913	508875	TP53I3	115496037	NP_001068846.1
+36617	9031	421977	TP53I3	513179140	XP_004935850.1
+44130	4932	855957	NOP53	6325111	NP_015179.1
+49386	9606	27296	TP53TG5	7656983	NP_055292.1
+49386	9598	469954	TP53TG5	114682187	XP_525338.2
+49386	9544	710738	TP53TG5	109091816	XP_001108534.1
+49386	9615	477242	TP53TG5	545540883	XP_005635169.1
+49386	9913	100138069	TP53TG5	528974674	XP_005215097.1
+91263	3702	832764	RLP53	15240433	NP_198058.1
+108155	9606	729355	TP53TG3B	153791741	NP_001093157.1
+108155	9606	24150	TP53TG3	7706743	NP_057296.1
+108155	9606	653550	TP53TG3C	327532730	NP_001192188.1
+108155	9606	729264	TP53TG3D	343962650	NP_001230651.1
+130838	3702	825415	BZIP53	15228754	NP_191801.1
+135219	3702	828637	FKBP53	18416534	NP_567717.1
+137113	4932	854276	INP53	398365141	NP_014752.3
+137360	9606	63970	TP53AIP1	304434534	NP_071395.2
+137360	9598	100609662	TP53AIP1	410046063	XP_003952119.1
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53 | grep 460 | less
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53 | grep "^460" | less
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53 | grep "^460" | cut -f 5 
+120407068
+332847216
+114051852
+50978974
+28849929
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep P53 | grep "^460" | cut -f 5 > p53.ids.txt
+[cb2@localhost sf_D_DRIVE]$ ls
+9606.tsv             cb2-firstassignment.git  count.txt             hammer              index.html     p53.ids.txt
+cb2-101-2019         cb2.tar                  domaincount.txt       hmmer-3.2.1.tar.gz  index.html.1   $RECYCLE.BIN
+cb2-firstassignment  cg2.tar                  ftp.ncbi.nlm.nih.gov  homologene.data     NC_000913.faa  System Volume Information
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep -i P53 | grep "^460" | cut -f 5 > p53.ids.txt
+[cb2@localhost sf_D_DRIVE]$ gedit p53.ids.txt 
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep -w  "^460" | cut -f 5 > p53.ids.txt
+[cb2@localhost sf_D_DRIVE]$ lw -c p53.ids.txt 
+bash: lw: command not found...
+[cb2@localhost sf_D_DRIVE]$ wc -c p53.ids.txt 
+87 p53.ids.txt
+[cb2@localhost sf_D_DRIVE]$ cat homologene.data | grep -w  "^460" | cut -f 5 | less
+[cb2@localhost sf_D_DRIVE]$ cat p53.ids.txt | wc -l
+9
+[cb2@localhost sf_D_DRIVE]$ cat p53.ids.txt | wc -
+      9       9      87 -
+[cb2@localhost sf_D_DRIVE]$ wget -q -O - "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?\
+> b=protein&id=$i&rettype=fasta&retmode=text"^C
+[cb2@localhost sf_D_DRIVE]$ cd
+[cb2@localhost ~]$ ls
+9606.tsv.gz          blastdb              Downloads         good.txt                                     my.iris.tsv   Pictures             test.ggplot.pdf
+adasdfawefaefb.sh    blast_p53            download_sequ.sh  hello                                        myiris.tsv    Public               testggplot.pdf
+adb.sh               BLOSUM62             err.log           hello.sh                                     output.file   R                    testgg.Rds
+add.sh               cb2-101-2019.tar.xz  error.txt         hmmer                                        outtry.file   Templates            testimage.pdf
+bcout.txt            class.R              err.txt           index.html?query=organism:9606+AND+gene:P53  outtry.txt    test                 uniprot_sprot.fasta
+blast-2.2.26         Desktop              ex_align.fas      Music                                        out.txt       test2                Videos
+blast-2.2.26.tar.gz  Documents            ex_align.fas.1    myiris.obj.Rds                               P04637.fasta  test.ggplot.his.pdf  vogelstein_tsg.txt
+[cb2@localhost ~]$ mv p53.ids.txt ~
+mv: cannot stat ‘p53.ids.txt’: No such file or directory
+[cb2@localhost ~]$ cd media/sf_D_DRIVE
+bash: cd: media/sf_D_DRIVE: No such file or directory
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt 
+download_sequ.sh: line 5: fori: command not found
+download_sequ.sh: line 6: syntax error near unexpected token `do'
+download_sequ.sh: line 6: `do'
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt 
+download_sequ.sh: line 5: syntax error near unexpected token `('
+download_sequ.sh: line 5: `for (i in `cat $1`)'
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt 
+download_sequ.sh: line 5: syntax error near unexpected token `('
+download_sequ.sh: line 5: `for (i in `cat $1`)'
+[cb2@localhost ~]$ find p53.ids.txt
+p53.ids.txt
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt 
+download_sequ.sh: line 5: syntax error near unexpected token `('
+download_sequ.sh: line 5: `for (i in `cat $1`)'
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt 
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt > text1.txt
+[cb2@localhost ~]$ gedit text1.txt 
+[cb2@localhost ~]$ nano download_sequ.sh 
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt > text1.txt
+[cb2@localhost ~]$ less te
+test                 test2/               test.ggplot.his.pdf  test.ggplot.pdf      testggplot.pdf       testgg.Rds           testimage.pdf        text1.txt
+[cb2@localhost ~]$ less text1.txt 
+[cb2@localhost ~]$ nano download_sequ.sh 
+[cb2@localhost ~]$ /media/sf_D_DRIVE
+bash: /media/sf_D_DRIVE: Is a directory
+[cb2@localhost ~]$ cd /media/sf_D_DRIVE
+[cb2@localhost sf_D_DRIVE]$ cd
+[cb2@localhost ~]$ bash download_sequ.sh p53.ids.txt > p53.fas
+[cb2@localhost ~]$ cat p53.fas | less
+[cb2@localhost ~]$ wget https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
+--2019-11-11 11:35:34--  https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
+Resolving www.drive5.com (www.drive5.com)... 199.195.116.69
+Connecting to www.drive5.com (www.drive5.com)|199.195.116.69|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 487906 (476K) [application/x-gzip]
+Saving to: ‘muscle3.8.31_i86linux64.tar.gz’
+
+100%[===========================================================================================================================================>] 487,906      916KB/s   in 0.5s   
+
+2019-11-11 11:35:35 (916 KB/s) - ‘muscle3.8.31_i86linux64.tar.gz’ saved [487906/487906]
+
+[cb2@localhost ~]$ tar -xzvf muscle3.8.31_i86linux64.tar.gz 
+muscle3.8.31_i86linux64
+[cb2@localhost ~]$ ls
+9606.tsv.gz          blastdb              Downloads         good.txt                                     Music           out.txt       Templates            testimage.pdf
+adasdfawefaefb.sh    blast_p53            download_sequ.sh  hello                                        myiris.obj.Rds  P04637.fasta  test                 text1.txt
+adb.sh               BLOSUM62             err.log           hello.sh                                     my.iris.tsv     p53.fas       test2                uniprot_sprot.fasta
+add.sh               cb2-101-2019.tar.xz  error.txt         hmmer                                        myiris.tsv      p53.ids.txt   test.ggplot.his.pdf  Videos
+bcout.txt            class.R              err.txt           index.html?query=organism:9606+AND+gene:P53  output.file     Pictures      test.ggplot.pdf      vogelstein_tsg.txt
+blast-2.2.26         Desktop              ex_align.fas      muscle3.8.31_i86linux64                      outtry.file     Public        testggplot.pdf
+blast-2.2.26.tar.gz  Documents            ex_align.fas.1    muscle3.8.31_i86linux64.tar.gz               outtry.txt      R             testgg.Rds
+[cb2@localhost ~]$ mv muscle3.8.31_i86linux64 muscle
+[cb2@localhost ~]$ ls
+9606.tsv.gz          blastdb              Downloads         good.txt                                     Music           out.txt       Templates            testimage.pdf
+adasdfawefaefb.sh    blast_p53            download_sequ.sh  hello                                        myiris.obj.Rds  P04637.fasta  test                 text1.txt
+adb.sh               BLOSUM62             err.log           hello.sh                                     my.iris.tsv     p53.fas       test2                uniprot_sprot.fasta
+add.sh               cb2-101-2019.tar.xz  error.txt         hmmer                                        myiris.tsv      p53.ids.txt   test.ggplot.his.pdf  Videos
+bcout.txt            class.R              err.txt           index.html?query=organism:9606+AND+gene:P53  output.file     Pictures      test.ggplot.pdf      vogelstein_tsg.txt
+blast-2.2.26         Desktop              ex_align.fas      muscle                                       outtry.file     Public        testggplot.pdf
+blast-2.2.26.tar.gz  Documents            ex_align.fas.1    muscle3.8.31_i86linux64.tar.gz               outtry.txt      R             testgg.Rds
+[cb2@localhost ~]$ ./muscle -i p53.fas -out p53.aln
+Invalid command line option "i"
+
+MUSCLE v3.8.31 by Robert C. Edgar
+
+http://www.drive5.com/muscle
+This software is donated to the public domain.
+Please cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.
+
+
+Basic usage
+
+    muscle -in <inputfile> -out <outputfile>
+
+Common options (for a complete list please see the User Guide):
+
+    -in <inputfile>    Input file in FASTA format (default stdin)
+    -out <outputfile>  Output alignment in FASTA format (default stdout)
+    -diags             Find diagonals (faster for similar sequences)
+    -maxiters <n>      Maximum number of iterations (integer, default 16)
+    -maxhours <h>      Maximum time to iterate in hours (default no limit)
+    -html              Write output in HTML format (default FASTA)
+    -msf               Write output in GCG MSF format (default FASTA)
+    -clw               Write output in CLUSTALW format (default FASTA)
+    -clwstrict         As -clw, with 'CLUSTAL W (1.81)' header
+    -log[a] <logfile>  Log to file (append if -loga, overwrite if -log)
+    -quiet             Do not write progress messages to stderr
+    -version           Display version information and exit
+
+Without refinement (very fast, avg accuracy similar to T-Coffee): -maxiters 2
+Fastest possible (amino acids): -maxiters 1 -diags -sv -distance1 kbit20_3
+Fastest possible (nucleotides): -maxiters 1 -diags
+[cb2@localhost ~]$ ./muscle -in p53.fas -out p53.aln
+
+MUSCLE v3.8.31 by Robert C. Edgar
+
+http://www.drive5.com/muscle
+This software is donated to the public domain.
+Please cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.
+
+p53 9 seqs, max length 393, avg  length 384
+00:00:00    10 MB(-2%)  Iter   1  100.00%  K-mer dist pass 1
+00:00:00    10 MB(-2%)  Iter   1  100.00%  K-mer dist pass 2
+00:00:00    14 MB(-2%)  Iter   1  100.00%  Align node       
+00:00:00    14 MB(-2%)  Iter   1  100.00%  Root alignment
+00:00:00    14 MB(-2%)  Iter   2  100.00%  Root alignment
+00:00:00    14 MB(-2%)  Iter   3  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter   4  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter   5  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter   6  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter   7  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter   7  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter   8  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter   9  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter  10  100.00%  Refine biparts
+00:00:00    14 MB(-2%)  Iter  11  100.00%  Refine biparts
+00:00:01    14 MB(-2%)  Iter  12  100.00%  Refine biparts
+00:00:01    14 MB(-2%)  Iter  13  100.00%  Refine biparts
+00:00:01    14 MB(-2%)  Iter  14  100.00%  Refine biparts
+00:00:01    14 MB(-2%)  Iter  15  100.00%  Refine biparts
+00:00:01    14 MB(-2%)  Iter  16  100.00%  Refine biparts
+[cb2@localhost ~]$ p53.aln less
+bash: p53.aln: command not found...
+[cb2@localhost ~]$ less p53.aln
+[cb2@localhost ~]$ hmmbuild --informat afa p53.hmm p53.aln
+# hmmbuild :: profile HMM construction from multiple sequence alignments
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# input alignment file:             p53.aln
+# output HMM file:                  p53.hmm
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# idx name                  nseq  alen  mlen eff_nseq re/pos description
+#---- -------------------- ----- ----- ----- -------- ------ -----------
+1     p53                      9   413   389     0.61  0.589 
+
+# CPU time: 0.63u 0.00s 00:00:00.63 Elapsed: 00:00:00.70
+[cb2@localhost ~]$ p53.hmm
+bash: p53.hmm: command not found...
+[cb2@localhost ~]$ ls
+9606.tsv.gz          blastdb              Downloads         good.txt                                     Music           out.txt       Public               testggplot.pdf
+adasdfawefaefb.sh    blast_p53            download_sequ.sh  hello                                        myiris.obj.Rds  P04637.fasta  R                    testgg.Rds
+adb.sh               BLOSUM62             err.log           hello.sh                                     my.iris.tsv     p53.aln       Templates            testimage.pdf
+add.sh               cb2-101-2019.tar.xz  error.txt         hmmer                                        myiris.tsv      p53.fas       test                 text1.txt
+bcout.txt            class.R              err.txt           index.html?query=organism:9606+AND+gene:P53  output.file     p53.hmm       test2                uniprot_sprot.fasta
+blast-2.2.26         Desktop              ex_align.fas      muscle                                       outtry.file     p53.ids.txt   test.ggplot.his.pdf  Videos
+blast-2.2.26.tar.gz  Documents            ex_align.fas.1    muscle3.8.31_i86linux64.tar.gz               outtry.txt      Pictures      test.ggplot.pdf      vogelstein_tsg.txt
+[cb2@localhost ~]$ find . -name "uniprot*"
+./blastdb/uniprot_sprot.fasta.gz.1
+./blastdb/uniprot_sprot.fasta
+./blastdb/uniprot_sprot.fasta.phr
+./blastdb/uniprot_sprot.fasta.psq
+./blastdb/uniprot_sprot.fasta.pin
+./uniprot_sprot.fasta
+./hmmer/hmmer-3.2.1/easel/formats/uniprot
+[cb2@localhost ~]$ cd hmmer
+[cb2@localhost hmmer]$ ls
+hmmer-3.2.1  hmmer-3.2.1.tar.gz
+[cb2@localhost hmmer]$ cd .
+[cb2@localhost hmmer]$ cd ..
+[cb2@localhost ~]$ hmmsearch -o p53_hits.txt p53.hmm ./uniprot_sprot.fasta 
+[cb2@localhost ~]$ gedit p53_hits.txt 
+[cb2@localhost ~]$ 
+
+
